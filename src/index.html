@@ -1,30 +1,106 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">
-        <i class="fas fa-university"></i>
-        Hello, UOC!
-      </h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>UOC Boilerplate</title>
+</head>
+
+<body>
+  <header class="layout-column-small padding-medium">
+    <img src="./assets/images/LogoQuimet.svg" alt="Logotip del bar" class="partial-width">
+    <hr style="border: none; height: 1px; background-color: black; width: 100%;">
+    <div class="layout-column-tiny">
+      <p>Plaça d'eivissa, 10</p>
+      <p>08032 Barcelona</p>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </header>
+
+  <img src="./assets/images/barActual.jpg" alt="Imatge de la terrassa del bar a l'actualitat" class="full-width">
+
+  <main class="main-margins">
+    <article class="layout-column-big">
+
+      <section class="layout-bottom-button">
+        <div class="layout-column-text-image">
+          <div class="layout-column-medium">
+            <h1 class="title">La història del Quimet</h1>
+            <p>
+              Durant els primers anys del Quimet d'Horta, l'establiment va ser conegut com el "bar del lloro", per tenir
+              com
+              a parroquià permanent al "lloro Juanito", un bonic lloro gris de cua vermella que un bon amic va regalar
+              al
+              senyor Quimet i que divertia a tots els clients imitant, perfectament, el xiulet del revisor dels tramvies
+              de
+              l'època. De fet, tan bé ho feia que sovint, el lloro Juanito del Quimet d'Hora era l'encarregat d'anunciar
+              la
+              sortida del tramvia que tenia l'inici i final de carrera davant del bar.
+
+              Des del primer moment, el lloro es va convertir en un atractiu especial de l'establiment, igual que els
+              entrepans del Bar Quimet que actualment són considerats dels millors entrepans de Barcelona.
+            </p>
+          </div>
+          <div class="image-container">
+            <img src="./assets/images/BarAntiguitat.jpg" alt="Imatge del bar als anys 70">
+            <div class="overlay layout-centered absolute-position-center">
+              <span class="overlay-text">1950</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary">Llegeix-ne més</button>
+      </section>
+
+      <section class="layout-bottom-button">
+        <div class="layout-column-medium">
+          <h1 class="title">Els plats estrella de la plaça</h1>
+          <div>
+            <include src="./views/card.html"></include>
+          </div>
+        </div>
+        <button class="btn btn-primary">Veu la carta al complert</button>
+      </section>
+
+      <section class="layout-bottom-button">
+        <div class="layout-column-medium">
+          <h1 class="title">Les opinions del barri</h1>
+          <include src="./views/cardReview.html"></include>
+        </div>
+        <button class="btn btn-primary">Ves a totes les ressenyes</button>
+      </section>
+
+      <section class="layout-column-text-image">
+        <div class="layout-column-medium">
+          <h1 class="title">L'història del Quimet</h1>
+          <p>
+            Durant els primers anys del Quimet d'Horta, l'establiment va ser conegut com el "bar del lloro", per tenir
+            com
+            a parroquià permanent al "lloro Juanito", un bonic lloro gris de cua vermella que un bon amic va regalar al
+            senyor Quimet i que divertia a tots els clients imitant, perfectament, el xiulet del revisor dels tramvies
+            de
+            l'època. De fet, tan bé ho feia que sovint, el lloro Juanito del Quimet d'Hora era l'encarregat d'anunciar
+            la
+            sortida del tramvia que tenia l'inici i final de carrera davant del bar.
+
+            Des del primer moment, el lloro es va convertir en un atractiu especial de l'establiment, igual que els
+            entrepans del Bar Quimet que actualment són considerats dels millors entrepans de Barcelona.
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="./assets/images/barActual2.jpg" alt="Imatge de l'interior del bar en l'actualitat">
+          <div class="overlay layout-centered absolute-position-center">
+            <span class="overlay-text">2019</span>
+          </div>
+        </div>
+
+      </section>
+    </article>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>
