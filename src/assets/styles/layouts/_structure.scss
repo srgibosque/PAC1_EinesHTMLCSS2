@@ -1,0 +1,122 @@
+@mixin layout-column(){
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  width: 100%;
+}
+
+.main-margins {
+  margin: map-get($space, l);
+
+  @media (min-width: $largeDesktopBreakpoint) {
+    margin: map-get($space, l) auto;
+    max-width: 1799px;
+  }
+}
+
+.partial-width {
+  width: 40%;
+
+  @media (min-width: $desktopBreakpoint) {
+    width: 20%;
+  }
+}
+
+.full-width {
+  min-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: map-get($space, m);
+}
+
+.image-container {
+  position: relative;
+}
+
+.padding-small {
+  padding: map-get($space, s);
+}
+
+.padding-medium {
+  padding: map-get($space, l);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: map-get($space, m);
+  min-width: 100%;
+
+  @media (min-width: $desktopBreakpoint) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $largeDesktopBreakpoint) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.layout-column-text-image {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: map-get($space, m);
+  width: 100%;
+
+  @media (max-width: $desktopBreakpoint) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.layout-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-column-tiny {
+  @include layout-column();
+  gap: map-get($space, xxs);
+}
+
+.layout-column-small {
+  @include layout-column();
+  gap: map-get($space, xs);
+}
+
+.layout-column-medium {
+  @include layout-column();
+  gap: map-get($space, m);
+}
+
+
+.layout-column-big {
+  @include layout-column();
+  gap: map-get($space, xl);
+}
+
+.layout-bottom-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: map-get($space, m);
+  align-self: stretch;
+}
+
+.layout-row-auto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.absolute-position-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
