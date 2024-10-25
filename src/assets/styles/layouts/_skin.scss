@@ -2,30 +2,27 @@ body {
   background-color: $background-color;
 }
 
-.default-fontStyle {
+.default-font-style {
   color: $text-color;
-
   font: {
     family: $font-family-sans-serif;
     size: 1.5rem;
     style: normal;
     weight: 500;
   }
-
   line-height: normal;
 }
 
-.secondary-fontStyle {
+.secondary-font-style {
   color: $primary-color;
   text-align: right;
-
   font: {
     size: 2rem;
     weight: 700;
   }
 }
 
-.h1-fontStyle {
+.h1-font-style {
   font: {
     weight: 700;
   }
@@ -60,7 +57,7 @@ body {
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgb(255 255 255 / .7);
   opacity: 0;
   transition: opacity 0.3s ease;
 

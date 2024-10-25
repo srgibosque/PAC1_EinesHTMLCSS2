@@ -33,17 +33,10 @@
   padding: map-get($space, m);
 }
 
-.image-container {
-  position: relative;
-}
+.image-container { position: relative; }
 
-.padding-small {
-  padding: map-get($space, s);
-}
-
-.padding-medium {
-  padding: map-get($space, l);
-}
+.padding-small { padding: map-get($space, s); }
+.padding-medium { padding: map-get($space, l); }
 
 .grid {
   display: grid;
@@ -92,7 +85,6 @@
   gap: map-get($space, m);
 }
 
-
 .layout-column-big {
   @include layout-column();
   gap: map-get($space, xl);
@@ -115,8 +107,5 @@
 
 .absolute-position-center {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
 }

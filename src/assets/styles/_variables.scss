@@ -1,16 +1,16 @@
 @use "sass:color";
 @use "sass:math";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 
-$primary-color: #0C6504;
-$background-color: #FFFDF6;
+$primary-color: #0c6504;
+$background-color: #fffdf6;
 $primary-color-light: color.scale($primary-color, $lightness: 80%);
-$text-color: #333333;
+$text-color: #333;
 $text-color-light: color.scale($text-color, $lightness: 50%);
-$pure-white: #ffffff;
+$pure-white: #fff;
 
 $default-space: 1rem;
 $space: (
@@ -22,8 +22,8 @@ $space: (
   xl: $default-space * 3
 );
 
-$button-shadow: -8px 8px 0px 0px $primary-color-light;
-$card-shadow: 0px 2px 2px 0px rgba(159, 162, 191, 0.32), 0px 9px 16px 0px rgba(159, 162, 191, 0.18);
+$button-shadow: -8px 8px 0 0 $primary-color-light;
+$card-shadow: 0 2px 2px 0 rgb(159 162 191 / .32), 0 9px 16px 0 rgb(159 162 191 / .18);
 
 $desktopBreakpoint: 789px;
 $largeDesktopBreakpoint: 1800px;
